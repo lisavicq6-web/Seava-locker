@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seava — Swim Carefree</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo" onclick="showPage('home')">
+        <img src="images/logo.png" alt="Seava" />
+        <span>seava</span>
+      </div>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a onclick="showPage('map')">Find a Seava</a></li>
+        <li><a onclick="showPage('pricing')">Pricing</a></li>
+        <li><a onclick="showPage('about')">About</a></li>
+        <li><a onclick="showPage('help')">Help</a></li>
+        <li><a class="nav-cta" onclick="showPage('dashboard')">My Space</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== HOME ===== -->
+  <section class="page active" id="page-home">
+
+    <!-- HERO -->
+    <div class="hero">
+      <div class="hero-bg" style="background-image:url('images/mer1.png')"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">Premium Beach Security</p>
+        <h1 class="hero-title">Swim <em>carefree.</em></h1>
+        <p class="hero-sub">Smart lockers on the finest beaches. Secure your valuables, charge your devices, and surrender to the sea.</p>
+        <div class="hero-btns">
+          <button class="btn-gold" onclick="showPage('map')">Find a Seava near you</button>
+          <button class="btn-outline-white" onclick="showPage('about')">Our story</button>
+        </div>
+      </div>
+      <div class="hero-wave">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#04111f"/></svg>
+      </div>
+    </div>
+
+    <!-- BENEFITS -->
+    <div class="section bg-deep">
+      <div class="container">
+        <div class="section-label gold">Why Seava?</div>
+        <h2 class="section-title white">Everything you need.<br/>Right on the shore.</h2>
+        <div class="benefits-grid">
+          <div class="benefit-card" data-aos>
+            <div class="benefit-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <h3>Secured valuables</h3>
+            <p>Reinforced smart lockers with encrypted access and live monitoring. Zero compromises.</p>
+          </div>
+          <div class="benefit-card gold-card" data-aos>
+            <div class="benefit-icon gold-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9" stroke-width="3"/><line x1="15" y1="9" x2="15.01" y2="9" stroke-width="3"/></svg>
+            </div>
+            <h3>Total freedom</h3>
+            <p>No more hiding keys in shoes. Lock it, dive in, and live fully in the moment.</p>
+          </div>
+          <div class="benefit-card" data-aos>
+            <div class="benefit-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg>
+            </div>
+            <h3>Device charging</h3>
+            <p>Built-in USB-C and wireless charging in every locker. Leave with a full battery.</p>
+          </div>
+          <div class="benefit-card" data-aos>
+            <div class="benefit-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18" stroke-width="3"/></svg>
+            </div>
+            <h3>Book from anywhere</h3>
+            <p>Reserve, unlock and extend your rental from your smartphone. No app required.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LOCKER SHOWCASE -->
+    <div class="section locker-showcase">
+      <div class="container locker-inner">
+        <div class="locker-text" data-aos>
+          <div class="section-label gold">The Seava locker</div>
+          <h2 class="section-title white">Engineered for the elements.</h2>
+          <p class="locker-desc">Marine-grade stainless steel. Saltwater resistant. Biometric-ready. The Seava locker is designed to withstand the harshest beach conditions while delivering a seamless luxury experience.</p>
+          <ul class="locker-specs">
+            <li><span class="spec-dot"></span>IP68 waterproof certification</li>
+            <li><span class="spec-dot"></span>Anti-theft reinforced body</li>
+            <li><span class="spec-dot"></span>Solar-assisted power</li>
+            <li><span class="spec-dot"></span>Real-time sensor monitoring</li>
+          </ul>
+          <button class="btn-gold" onclick="showPage('map')">Book a locker</button>
+        </div>
+        <div class="locker-img-wrap" data-aos>
+          <div class="locker-glow"></div>
+          <img src="images/casier.png" alt="Seava locker" class="locker-img" />
+        </div>
+      </div>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats-bar">
+      <div class="container stats-grid">
+        <div class="stat-item" data-aos>
+          <span class="stat-num">500<sup>+</sup></span>
+          <span class="stat-lbl">Lockers deployed</span>
+        </div>
+        <div class="stat-item" data-aos>
+          <span class="stat-num">30<sup>+</sup></span>
+          <span class="stat-lbl">Beach locations</span>
+        </div>
+        <div class="stat-item" data-aos>
+          <span class="stat-num">98<sup>%</sup></span>
+          <span class="stat-lbl">Satisfaction rate</span>
+        </div>
+        <div class="stat-item" data-aos>
+          <span class="stat-num">24/7</span>
+          <span class="stat-lbl">Live support</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- BEACHES GALLERY -->
+    <div class="section bg-deep">
+      <div class="container">
+        <div class="section-label gold">Our locations</div>
+        <h2 class="section-title white">Where the sea meets<br/>peace of mind.</h2>
+        <div class="gallery-grid">
+          <div class="gallery-card tall" onclick="showPage('map')">
+            <img src="images/crique1.png" alt="Crique Seava" />
+            <div class="gallery-overlay">
+              <span>Nice — Promenade</span>
+            </div>
+          </div>
+          <div class="gallery-col">
+            <div class="gallery-card" onclick="showPage('map')">
+              <img src="images/mer2.png" alt="Mer Seava" />
+              <div class="gallery-overlay"><span>Cannes — La Croisette</span></div>
+            </div>
+            <div class="gallery-card" onclick="showPage('map')">
+              <img src="images/crique2.png" alt="Crique" />
+              <div class="gallery-overlay"><span>Antibes — Juan-les-Pins</span></div>
+            </div>
+          </div>
+          <div class="gallery-col">
+            <div class="gallery-card" onclick="showPage('map')">
+              <img src="images/crique3.png" alt="Crique" />
+              <div class="gallery-overlay"><span>Monaco — Larvotto</span></div>
+            </div>
+            <div class="gallery-card" onclick="showPage('map')">
+              <img src="images/mer1.png" alt="Mer" />
+              <div class="gallery-overlay"><span>Menton — Sablettes</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-cta">
+          <button class="btn-gold" onclick="showPage('map')">View all locations &rarr;</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRICING PREVIEW -->
+    <div class="section sunset-section">
+      <div class="sunset-bg" style="background-image:url('images/mer2.png')"></div>
+      <div class="sunset-overlay"></div>
+      <div class="container" style="position:relative;z-index:1;">
+        <div class="section-label gold">Simple pricing</div>
+        <h2 class="section-title white">Pick your plan.<br/>Hit the waves.</h2>
+        <div class="pricing-row">
+          <div class="price-card" data-aos>
+            <div class="price-name">Basic</div>
+            <div class="price-val"><em>€2</em><span>/hour</span></div>
+            <ul>
+              <li>Small locker (30×30 cm)</li>
+              <li>USB-C charging</li>
+              <li>Smartphone unlock</li>
+            </ul>
+            <button class="btn-outline-gold" onclick="showPage('map')">Book now</button>
+          </div>
+          <div class="price-card featured-price" data-aos>
+            <div class="price-badge">Most popular</div>
+            <div class="price-name">Family</div>
+            <div class="price-val"><em>€4</em><span>/hour</span></div>
+            <ul>
+              <li>Large locker (60×50 cm)</li>
+              <li>Wireless + USB-C charging</li>
+              <li>Up to 4 unlock codes</li>
+              <li>Priority support</li>
+            </ul>
+            <button class="btn-gold" onclick="showPage('map')">Book now</button>
+          </div>
+          <div class="price-card" data-aos>
+            <div class="price-name">Day Pass</div>
+            <div class="price-val"><em>€12</em><span>/day</span></div>
+            <ul>
+              <li>Full-day access</li>
+              <li>Unlimited unlocks</li>
+              <li>Wireless + USB-C</li>
+              <li>Priority support</li>
+            </ul>
+            <button class="btn-outline-gold" onclick="showPage('map')">Book now</button>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:36px;">
+          <button class="btn-text-gold" onclick="showPage('pricing')">See full pricing details &rarr;</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-wave">
+        <svg viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0,30 C480,60 960,0 1440,30 L1440,0 L0,0 Z" fill="#0a2040"/></svg>
+      </div>
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <span class="footer-logo">seava</span>
+          <p>Swim carefree.</p>
+        </div>
+        <div class="footer-nav">
+          <div class="footer-col">
+            <h4>Product</h4>
+            <a onclick="showPage('map')">Find a Seava</a>
+            <a onclick="showPage('pricing')">Pricing</a>
+            <a onclick="showPage('availability')">Availability</a>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <a onclick="showPage('about')">About us</a>
+            <a onclick="showPage('help')">Help &amp; Support</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Seava. All rights reserved. &nbsp;|&nbsp; Crafted with care.</p>
+      </div>
+    </footer>
+  </section>
+
+  <!-- ===== MAP ===== -->
+  <section class="page" id="page-map">
+    <div class="inner-hero" style="background-image:url('images/crique1.png')">
+      <div class="inner-hero-overlay"></div>
+      <div class="inner-hero-content container">
+        <button class="back-btn" onclick="showPage('home')">&larr; Back</button>
+        <h1>Find a Seava</h1>
+        <p>Select a beach to check availability</p>
+      </div>
+      <div class="inner-wave"><svg viewBox="0 0 1440 50" preserveAspectRatio="none"><path d="M0,25 C360,50 1080,0 1440,25 L1440,50 L0,50 Z" fill="#04111f"/></svg></div>
+    </div>
+    <div class="map-layout bg-deep">
+      <div class="map-sidebar">
+        <h3 class="sidebar-title">Filters</h3>
+        <div class="filter-group">
+          <label>Availability</label>
+          <select>
+            <option>All</option>
+            <option>Available now</option>
+            <option>Available today</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>Locker size</label>
+          <div class="chip-group">
+            <button class="chip active" onclick="setChip(this)">All</button>
+            <button class="chip" onclick="setChip(this)">Small</button>
+            <button class="chip" onclick="setChip(this)">Family</button>
+          </div>
+        </div>
+        <div class="filter-group">
+          <label>Max price/hour</label>
+          <div class="range-row">
+            <input type="range" min="1" max="15" value="10" oninput="document.getElementById('rv').textContent='€'+this.value" />
+            <span id="rv">€10</span>
+          </div>
+        </div>
+        <h3 class="sidebar-title" style="margin-top:28px;">Nearby beaches</h3>
+        <div class="beach-list">
+          <div class="beach-row active-row" onclick="pickBeach(this,'Nice — Promenade des Anglais','crique2.png')">
+            <div class="bdot green"></div>
+            <div class="binfo"><strong>Nice — Promenade</strong><span>12 available &middot; from €2/h</span></div>
+          </div>
+          <div class="beach-row" onclick="pickBeach(this,'Cannes — La Croisette','mer2.png')">
+            <div class="bdot green"></div>
+            <div class="binfo"><strong>Cannes — La Croisette</strong><span>6 available &middot; from €2/h</span></div>
+          </div>
+          <div class="beach-row" onclick="pickBeach(this,'Antibes — Juan-les-Pins','crique3.png')">
+            <div class="bdot orange"></div>
+            <div class="binfo"><strong>Antibes — Juan-les-Pins</strong><span>2 available &middot; from €2/h</span></div>
+          </div>
+          <div class="beach-row" onclick="pickBeach(this,'Monaco — Larvotto','mer1.png')">
+            <div class="bdot red"></div>
+            <div class="binfo"><strong>Monaco — Larvotto</strong><span>Full &mdash; try tomorrow</span></div>
+          </div>
+          <div class="beach-row" onclick="pickBeach(this,'Menton — Plage des Sablettes','crique1.png')">
+            <div class="bdot green"></div>
+            <div class="binfo"><strong>Menton — Sablettes</strong><span>8 available &middot; from €2/h</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="map-main">
+        <div class="map-img-wrap">
+          <img src="images/crique1.png" alt="Beach" class="map-preview-img" id="mapPreviewImg" />
+          <div class="map-img-overlay">
+            <div class="map-pin-group">
+              <div class="mpin available" style="left:38%;top:42%" onclick="pickPinBeach('Nice — Promenade des Anglais','crique2.png')"><span></span><label>Nice</label></div>
+              <div class="mpin available" style="left:24%;top:55%" onclick="pickPinBeach('Cannes — La Croisette','mer2.png')"><span></span><label>Cannes</label></div>
+              <div class="mpin limited" style="left:31%;top:49%" onclick="pickPinBeach('Antibes — Juan-les-Pins','crique3.png')"><span></span><label>Antibes</label></div>
+              <div class="mpin full" style="left:57%;top:37%" onclick="pickPinBeach('Monaco — Larvotto','mer1.png')"><span></span><label>Monaco</label></div>
+              <div class="mpin available" style="left:67%;top:34%" onclick="pickPinBeach('Menton — Plage des Sablettes','crique1.png')"><span></span><label>Menton</label></div>
+            </div>
+            <div class="map-legend">
+              <span><i class="ldot green"></i>Available</span>
+              <span><i class="ldot orange"></i>Limited</span>
+              <span><i class="ldot red"></i>Full</span>
+            </div>
+          </div>
+        </div>
+        <div class="map-cta-bar" id="mapCtaBar">
+          <span id="mapCtaName">Nice — Promenade des Anglais</span>
+          <button class="btn-gold" onclick="showPage('availability')">Select this Seava &rarr;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AVAILABILITY ===== -->
+  <section class="page" id="page-availability">
+    <div class="inner-hero" style="background-image:url('images/mer2.png')">
+      <div class="inner-hero-overlay"></div>
+      <div class="inner-hero-content container">
+        <button class="back-btn" onclick="showPage('map')">&larr; Back to map</button>
+        <h1>Available Lockers</h1>
+        <p id="availLoc">Nice — Promenade des Anglais</p>
+      </div>
+      <div class="inner-wave"><svg viewBox="0 0 1440 50" preserveAspectRatio="none"><path d="M0,25 C360,50 1080,0 1440,25 L1440,50 L0,50 Z" fill="#04111f"/></svg></div>
+    </div>
+    <div class="bg-deep section">
+      <div class="container">
+        <div class="avail-tabs">
+          <button class="atab active" onclick="filterLock(this,'all')">All</button>
+          <button class="atab" onclick="filterLock(this,'small')">Small</button>
+          <button class="atab" onclick="filterLock(this,'family')">Family</button>
+        </div>
+        <div class="lockers-grid" id="lockersGrid">
+          <div class="lcard" data-type="small">
+            <img src="images/casier.png" alt="Locker" class="lcard-img" />
+            <div class="lcard-dot green"></div>
+            <div class="lcard-id">A01</div>
+            <div class="lcard-type">Small &middot; 30×30 cm</div>
+            <div class="lcard-price">€2/h</div>
+            <button class="btn-gold btn-sm" onclick="pickLocker('A01','Small','€2/h',2)">Book now</button>
+          </div>
+          <div class="lcard" data-type="small">
+            <img src="images/casier.png" alt="Locker" class="lcard-img" />
+            <div class="lcard-dot green"></div>
+            <div class="lcard-id">A02</div>
+            <div class="lcard-type">Small &middot; 30×30 cm</div>
+            <div class="lcard-price">€2/h</div>
+            <button class="btn-gold btn-sm" onclick="pickLocker('A02','Small','€2/h',2)">Book now</button>
+          </div>
+          <div class="lcard occupied" data-type="small">
+            <img src="images/casier.png" alt="Locker" class="lcard-img" />
+            <div class="lcard-dot red"></div>
+            <div class="lcard-id">A03</div>
+            <div class="lcard-type">Small &middot; 30×30 cm</div>
+            <div class="lcard-price">€2/h</div>
+            <button class="btn-disabled" disabled>Occupied</button>
+          </div>
+          <div class="lcard" data-type="small">
+            <img src="images/casier.png" alt="Locker" class="lcard-img" />
+            <div class="lcard-dot green"></div>
+            <div class="lcard-id">A04</div>
+            <div class="lcard-type">Small &middot; 30×30 cm</div>
+            <div class="lcard-price">€2/h</div>
+            <button class="btn-gold btn-sm" onclick="pickLocker('A04','Small','€2/h',2)">Book now</button>
+          </div>
+          <div class="lcard" data-type="family">
+            <img src="images/casier.png" alt="Locker" class="lcard-img" />
+            <div class="lcard-dot green"></div>
+            <div class="lcard-id">B01</div>
+            <div class="lcard-type">Family &middot; 60×50 cm</div>
+            <div class="lcard-price">€4/h</div>
+            <button class="btn-gold btn-sm" onclick="pickLocker('B01','Family','€4/h',4)">Book now</button>
+          </div>
+          <div class="lcard occupied" data-type="family">
+            <img src="images/casier.png" alt="Locker" class="lcard-img" />
+            <div class="lcard-dot red"></div>
+            <div class="lcard-id">B02</div>
+            <div class="lcard-type">Family &middot; 60×50 cm</div>
+            <div class="lcard-price">€4/h</div>
+            <button class="btn-disabled" disabled>Occupied</button>
+          </div>
+          <div class="lcard" data-type="family">
+            <img src="images/casier.png" alt="Locker" class="lcard-img" />
+            <div class="lcard-dot green"></div>
+            <div class="lcard-id">B03</div>
+            <div class="lcard-type">Family &middot; 60×50 cm</div>
+            <div class="lcard-price">€4/h</div>
+            <button class="btn-gold btn-sm" onclick="pickLocker('B03','Family','€4/h',4)">Book now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BOOKING ===== -->
+  <section class="page" id="page-booking">
+    <div class="inner-hero" style="background-image:url('images/crique3.png')">
+      <div class="inner-hero-overlay"></div>
+      <div class="inner-hero-content container">
+        <button class="back-btn" onclick="showPage('availability')">&larr; Back</button>
+        <h1>Your Booking</h1>
+        <p>Review and confirm your reservation</p>
+      </div>
+      <div class="inner-wave"><svg viewBox="0 0 1440 50" preserveAspectRatio="none"><path d="M0,25 C360,50 1080,0 1440,25 L1440,50 L0,50 Z" fill="#04111f"/></svg></div>
+    </div>
+    <div class="bg-deep section">
+      <div class="container booking-wrap">
+        <!-- Steps -->
+        <div class="steps-row">
+          <div class="step-item active" id="si1"><span>1</span>Summary</div>
+          <div class="step-line"></div>
+          <div class="step-item" id="si2"><span>2</span>Options</div>
+          <div class="step-line"></div>
+          <div class="step-item" id="si3"><span>3</span>Payment</div>
+        </div>
+
+        <!-- Step 1 -->
+        <div class="bstep" id="bstep1">
+          <div class="summary-card">
+            <h3>Booking Summary</h3>
+            <div class="srow"><span>Location</span><strong id="sLoc">Nice — Promenade</strong></div>
+            <div class="srow"><span>Locker</span><strong id="sLocker">A01 — Small</strong></div>
+            <div class="srow"><span>Rate</span><strong id="sRate">€2/h</strong></div>
+            <div class="srow">
+              <span>Duration</span>
+              <div class="dur-ctrl">
+                <button onclick="chgDur(-1)">-</button>
+                <span id="durVal">2h</span>
+                <button onclick="chgDur(1)">+</button>
+              </div>
+            </div>
+            <div class="srow total-srow"><span>Total</span><strong id="sTotal">€4.00</strong></div>
+          </div>
+          <button class="btn-gold btn-full" onclick="goStep(2)">Continue &rarr;</button>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bstep hidden" id="bstep2">
+          <h3 class="step-sub">Choose your time slot</h3>
+          <div class="slots-grid">
+            <button class="slot active" onclick="pickSlot(this)">Now</button>
+            <button class="slot" onclick="pickSlot(this)">10:00</button>
+            <button class="slot" onclick="pickSlot(this)">11:00</button>
+            <button class="slot" onclick="pickSlot(this)">12:00</button>
+            <button class="slot" onclick="pickSlot(this)">13:00</button>
+            <button class="slot" onclick="pickSlot(this)">14:00</button>
+            <button class="slot" onclick="pickSlot(this)">15:00</button>
+            <button class="slot" onclick="pickSlot(this)">16:00</button>
+            <button class="slot" onclick="pickSlot(this)">17:00</button>
+          </div>
+          <div class="option-box">
+            <div class="opt-row">
+              <div><strong>Phone charging</strong><p>USB-C &amp; wireless included</p></div>
+              <label class="tog">
+                <input type="checkbox" />
+                <span class="tog-track"><span class="tog-thumb"></span></span>
+              </label>
+            </div>
+          </div>
+          <div class="step-nav">
+            <button class="btn-ghost-gold" onclick="goStep(1)">&larr; Back</button>
+            <button class="btn-gold" onclick="goStep(3)">Proceed to payment &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bstep hidden" id="bstep3">
+          <h3 class="step-sub">Payment method</h3>
+          <div class="pay-methods">
+            <button class="pay-opt active" onclick="selPay(this,'apple')">
+              <img src="images/apple-pay.png" alt="Apple Pay" />
+            </button>
+            <button class="pay-opt" onclick="selPay(this,'google')">
+              <img src="images/google-pay.png" alt="Google Pay" />
+            </button>
+            <button class="pay-opt" onclick="selPay(this,'card')">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+              Card
+            </button>
+          </div>
+          <div id="cardFields" class="card-fields" style="display:none">
+            <input type="text" placeholder="Card number" class="cinput" maxlength="19" oninput="fmtCard(this)" />
+            <div class="card-row2">
+              <input type="text" placeholder="MM/YY" maxlength="5" class="cinput" />
+              <input type="text" placeholder="CVV" maxlength="3" class="cinput" />
+            </div>
+            <input type="text" placeholder="Cardholder name" class="cinput" />
+          </div>
+          <div class="pay-total-row">
+            <span>Total</span>
+            <strong id="payTot">€4.00</strong>
+          </div>
+          <div class="ssl-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#d4a843" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Secured by 256-bit SSL encryption
+          </div>
+          <div class="step-nav">
+            <button class="btn-ghost-gold" onclick="goStep(2)">&larr; Back</button>
+            <button class="btn-gold btn-full" onclick="confirmPay()">Pay now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DASHBOARD ===== -->
+  <section class="page" id="page-dashboard">
+    <div class="inner-hero" style="background-image:url('images/mer1.png')">
+      <div class="inner-hero-overlay"></div>
+      <div class="inner-hero-content container">
+        <h1>Your Space</h1>
+        <p>Locker <strong id="dLockerId">A01</strong> &middot; <span id="dLockerLoc">Nice — Promenade</span></p>
+      </div>
+      <div class="inner-wave"><svg viewBox="0 0 1440 50" preserveAspectRatio="none"><path d="M0,25 C360,50 1080,0 1440,25 L1440,50 L0,50 Z" fill="#04111f"/></svg></div>
+    </div>
+    <div class="bg-deep section">
+      <div class="container dash-grid">
+        <div class="dash-card timer-card">
+          <p class="dlabel">Time remaining</p>
+          <div class="timer-num" id="timerNum">1:59:47</div>
+          <div class="timer-track"><div class="timer-fill" id="timerFill" style="width:66%"></div></div>
+          <button class="btn-ghost-gold" onclick="extendSession()">+ Extend time</button>
+        </div>
+        <div class="dash-card unlock-card">
+          <div class="unlock-btn" onclick="toggleUnlock()" id="unlockBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <p class="dlabel">Tap to unlock</p>
+          <p class="unlock-state" id="unlockState">Locked</p>
+        </div>
+        <div class="dash-card charge-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#d4a843" stroke-width="1.5" style="width:38px;height:38px"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          <div>
+            <strong>Charging active</strong>
+            <p>USB-C connected</p>
+          </div>
+          <div class="charge-bars">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+        <div class="dash-card history-card">
+          <h3>Booking history</h3>
+          <div class="hlist">
+            <div class="hrow"><div><strong>Nice — A01</strong><span>Today &middot; 2h</span></div><span class="hprice">€4.00</span></div>
+            <div class="hrow"><div><strong>Cannes — B02</strong><span>Jun 14 &middot; 3h</span></div><span class="hprice">€12.00</span></div>
+            <div class="hrow"><div><strong>Nice — A05</strong><span>Jun 10 &middot; 1h</span></div><span class="hprice">€2.00</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="page" id="page-about">
+    <div class="inner-hero tall-hero" style="background-image:url('images/crique2.png')">
+      <div class="inner-hero-overlay"></div>
+      <div class="inner-hero-content container">
+        <button class="back-btn" onclick="showPage('home')">&larr; Back</button>
+        <div class="section-label gold">Our story</div>
+        <h1>Born from a day<br/>at the beach.</h1>
+      </div>
+      <div class="inner-wave"><svg viewBox="0 0 1440 50" preserveAspectRatio="none"><path d="M0,25 C360,50 1080,0 1440,25 L1440,50 L0,50 Z" fill="#04111f"/></svg></div>
+    </div>
+    <div class="bg-deep section">
+      <div class="container about-grid">
+        <div class="about-txt">
+          <h2>Our mission</h2>
+          <p>Seava was born from a simple frustration: why should you hide your phone in your shoe while the sea calls? We believe the beach should mean total freedom.</p>
+          <p>We design and deploy premium smart locker stations directly on beaches — so that swimmers, families and travellers can enjoy the sea without a single worry.</p>
+          <h2>Our vision</h2>
+          <p>We are building the future of beach infrastructure. Sustainable, intelligent, and beautifully crafted. Seava stations blend into the landscape while delivering a connected luxury experience.</p>
+        </div>
+        <div class="about-values">
+          <div class="val-item" data-aos>
+            <div class="val-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div><strong>Security first</strong><p>Every locker is reinforced, monitored and tamper-proof.</p></div>
+          </div>
+          <div class="val-item" data-aos>
+            <div class="val-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+            <div><strong>Accessible everywhere</strong><p>No app needed. Book from any browser in seconds.</p></div>
+          </div>
+          <div class="val-item" data-aos>
+            <div class="val-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a10 10 0 0 1 0 20A10 10 0 0 1 12 2zm0 0v20M2 12h20"/></svg></div>
+            <div><strong>Eco-responsible</strong><p>Solar-powered stations with zero carbon footprint.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRICING ===== -->
+  <section class="page" id="page-pricing">
+    <div class="inner-hero" style="background-image:url('images/mer2.png')">
+      <div class="inner-hero-overlay"></div>
+      <div class="inner-hero-content container">
+        <button class="back-btn" onclick="showPage('home')">&larr; Back</button>
+        <h1>Pricing</h1>
+        <p>Simple, transparent. No hidden fees.</p>
+      </div>
+      <div class="inner-wave"><svg viewBox="0 0 1440 50" preserveAspectRatio="none"><path d="M0,25 C360,50 1080,0 1440,25 L1440,50 L0,50 Z" fill="#04111f"/></svg></div>
+    </div>
+    <div class="bg-deep section">
+      <div class="container">
+        <div class="pricing-full-grid">
+          <div class="pfcard" data-aos>
+            <div class="pficon"><svg viewBox="0 0 24 24" fill="none" stroke="#d4a843" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+            <div class="pfname">Seava Basic</div>
+            <div class="pfprice"><em>€2</em><span>/hour</span></div>
+            <ul class="pflist">
+              <li class="yes">Small locker (30×30 cm)</li>
+              <li class="yes">USB-C charging</li>
+              <li class="yes">Smartphone unlock</li>
+              <li class="yes">1 access code</li>
+              <li class="no">Wireless charging</li>
+              <li class="no">Priority support</li>
+            </ul>
+            <button class="btn-outline-gold" onclick="showPage('map')">Book Basic</button>
+          </div>
+          <div class="pfcard featured-pf" data-aos>
+            <div class="pfbadge">&#11088; Most popular</div>
+            <div class="pficon"><svg viewBox="0 0 24 24" fill="none" stroke="#d4a843" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <div class="pfname">Seava Family</div>
+            <div class="pfprice"><em>€4</em><span>/hour</span></div>
+            <ul class="pflist">
+              <li class="yes">Large locker (60×50 cm)</li>
+              <li class="yes">USB-C + wireless charging</li>
+              <li class="yes">Up to 4 unlock codes</li>
+              <li class="yes">Priority support</li>
+              <li class="yes">Free extension (1×)</li>
+              <li class="yes">SMS notifications</li>
+            </ul>
+            <button class="btn-gold" onclick="showPage('map')">Book Family</button>
+          </div>
+          <div class="pfcard" data-aos>
+            <div class="pficon"><svg viewBox="0 0 24 24" fill="none" stroke="#d4a843" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+            <div class="pfname">Seava Day Pass</div>
+            <div class="pfprice"><em>€12</em><span>/day</span></div>
+            <ul class="pflist">
+              <li class="yes">Full-day access (8h–20h)</li>
+              <li class="yes">Unlimited unlocks</li>
+              <li class="yes">USB-C + wireless</li>
+              <li class="yes">Priority support</li>
+              <li class="yes">Locker swap included</li>
+              <li class="yes">SMS notifications</li>
+            </ul>
+            <button class="btn-outline-gold" onclick="showPage('map')">Book Day Pass</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HELP ===== -->
+  <section class="page" id="page-help">
+    <div class="inner-hero" style="background-image:url('images/crique3.png')">
+      <div class="inner-hero-overlay"></div>
+      <div class="inner-hero-content container">
+        <button class="back-btn" onclick="showPage('home')">&larr; Back</button>
+        <h1>Help &amp; Support</h1>
+        <p>We're here for you, anytime.</p>
+      </div>
+      <div class="inner-wave"><svg viewBox="0 0 1440 50" preserveAspectRatio="none"><path d="M0,25 C360,50 1080,0 1440,25 L1440,50 L0,50 Z" fill="#04111f"/></svg></div>
+    </div>
+    <div class="bg-deep section">
+      <div class="container help-wrap">
+        <h2 class="help-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">How does Seava work? <span>&#8964;</span></button>
+            <div class="faq-a"><p>Find the nearest Seava station on our map, choose your locker size, pay online and receive your unlock code by SMS. Tap the code on the station to open your locker. Lock it when you leave — your session ends automatically.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">What happens if my session expires while I'm swimming? <span>&#8964;</span></button>
+            <div class="faq-a"><p>You'll receive an SMS 15 minutes before your session ends. You can extend directly from the link in the SMS. Your locker stays locked until you return — we never open it without your action.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">Is my phone actually charged inside? <span>&#8964;</span></button>
+            <div class="faq-a"><p>Yes. Every Seava locker has a built-in USB-C port. Family and Day Pass tiers also include wireless Qi charging. Just plug in and go swim.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">What if there's a problem with my locker? <span>&#8964;</span></button>
+            <div class="faq-a"><p>Each station has an emergency call button. You can also contact our 24/7 support team via live chat below or by calling our hotline. We resolve any issue within minutes.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">Can I share my locker with my family? <span>&#8964;</span></button>
+            <div class="faq-a"><p>Yes! The Family plan supports up to 4 individual unlock codes so each family member can access the locker independently.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggleFaq(this)">What is your refund policy? <span>&#8964;</span></button>
+            <div class="faq-a"><p>If your locker is faulty or unavailable, you receive a full refund within 24 hours. For cancellations before the session starts, full refund if requested within 30 minutes of booking.</p></div>
+          </div>
+        </div>
+        <h2 class="help-title" style="margin-top:64px">Still need help?</h2>
+        <div class="contact-grid">
+          <div class="ccard">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#d4a843" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <strong>Live chat</strong><p>Available 24/7</p>
+            <button class="btn-gold" onclick="openChat()">Start chat</button>
+          </div>
+          <div class="ccard">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#d4a843" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.1a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.3h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.06 6.06l1.09-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <strong>Phone</strong><p>+33 1 23 45 67 89</p>
+            <button class="btn-outline-gold">Call now</button>
+          </div>
+          <div class="ccard">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#d4a843" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <strong>Email</strong><p>support@seava.com</p>
+            <button class="btn-outline-gold">Send email</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <!-- TYPEFORM FEEDBACK WIDGET -->
+  <div data-tf-live="01KMDW4Q1C57JQ1KF6FP9033D1"></div>
+  <script src="//embed.typeform.com/next/embed.js"></script>
+
+  <!-- CHAT -->
+  <div class="chat-widget" id="chatWidget" style="display:none">
+    <div class="chat-head">
+      <span>Seava Support</span>
+      <button onclick="closeChat()">&#10005;</button>
+    </div>
+    <div class="chat-body" id="chatBody">
+      <div class="cmsg bot">Hi! How can we help you today?</div>
+    </div>
+    <div class="chat-input">
+      <input type="text" id="chatIn" placeholder="Type a message..." onkeydown="if(event.key==='Enter')sendChat()" />
+      <button onclick="sendChat()">&#8593;</button>
+    </div>
+  </div>
+
+  <script>
+    // ---- PAGE ROUTER ----
+    function showPage(id) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById('page-' + id).classList.add('active');
+      window.scrollTo(0, 0);
+      closeMenu();
+      if (id === 'dashboard') startTimer();
+      runAos();
+    }
+
+    // ---- NAVBAR ----
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('open');
+      document.getElementById('hamburger').classList.toggle('open');
+    }
+    function closeMenu() {
+      document.getElementById('navLinks').classList.remove('open');
+      document.getElementById('hamburger').classList.remove('open');
+    }
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // ---- MAP ----
+    function pickBeach(el, name, img) {
+      document.querySelectorAll('.beach-row').forEach(r => r.classList.remove('active-row'));
+      el.classList.add('active-row');
+      document.getElementById('mapCtaName').textContent = name;
+      document.getElementById('mapCtaBar').classList.add('show');
+      document.getElementById('availLoc').textContent = name;
+      if (img) document.getElementById('mapPreviewImg').src = 'images/' + img;
+    }
+    function pickPinBeach(name, img) {
+      document.getElementById('mapCtaName').textContent = name;
+      document.getElementById('mapCtaBar').classList.add('show');
+      document.getElementById('availLoc').textContent = name;
+      if (img) document.getElementById('mapPreviewImg').src = 'images/' + img;
+    }
+    function setChip(el) {
+      el.closest('.chip-group').querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+      el.classList.add('active');
+    }
+
+    // ---- AVAILABILITY ----
+    function filterLock(btn, type) {
+      document.querySelectorAll('.atab').forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.lcard').forEach(c => {
+        c.style.display = (type === 'all' || c.dataset.type === type) ? 'flex' : 'none';
+      });
+    }
+
+    let locker = { id:'A01', type:'Small', price:'€2/h', rate:2 };
+    function pickLocker(id, type, price, rate) {
+      locker = { id, type, price, rate };
+      document.getElementById('sLocker').textContent = id + ' — ' + type;
+      document.getElementById('sRate').textContent = price;
+      updateTotal();
+      showPage('booking');
+    }
+
+    // ---- BOOKING ----
+    let dur = 2;
+    function chgDur(d) {
+      dur = Math.max(1, Math.min(12, dur + d));
+      document.getElementById('durVal').textContent = dur + 'h';
+      updateTotal();
+    }
+    function updateTotal() {
+      const t = (locker.rate * dur).toFixed(2);
+      document.getElementById('sTotal').textContent = '€' + t;
+      document.getElementById('payTot').textContent = '€' + t;
+    }
+    function goStep(n) {
+      document.querySelectorAll('.bstep').forEach(s => s.classList.add('hidden'));
+      document.getElementById('bstep' + n).classList.remove('hidden');
+      [1,2,3].forEach(i => {
+        const el = document.getElementById('si' + i);
+        el.classList.toggle('active', i <= n);
+        el.classList.toggle('done', i < n);
+      });
+    }
+    function pickSlot(btn) {
+      document.querySelectorAll('.slot').forEach(s => s.classList.remove('active'));
+      btn.classList.add('active');
+    }
+    function selPay(btn, type) {
+      document.querySelectorAll('.pay-opt').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('cardFields').style.display = type === 'card' ? 'flex' : 'none';
+    }
+    function fmtCard(input) {
+      let v = input.value.replace(/\D/g,'').substring(0,16);
+      input.value = v.replace(/(.{4})/g,'$1 ').trim();
+    }
+    function confirmPay() {
+      showToast('Payment confirmed! Enjoy the sea.');
+      document.getElementById('dLockerId').textContent = locker.id;
+      setTimeout(() => showPage('dashboard'), 1500);
+    }
+
+    // ---- DASHBOARD TIMER ----
+    let timerInt = null;
+    let totalSec = 7200;
+    let remSec = 7187;
+    function startTimer() {
+      if (timerInt) clearInterval(timerInt);
+      timerInt = setInterval(() => {
+        if (remSec <= 0) { clearInterval(timerInt); return; }
+        remSec--;
+        const h = Math.floor(remSec / 3600);
+        const m = Math.floor((remSec % 3600) / 60);
+        const s = remSec % 60;
+        document.getElementById('timerNum').textContent =
+          (h > 0 ? h + ':' : '') + String(m).padStart(2,'0') + ':' + String(s).padStart(2,'0');
+        const pct = (remSec / totalSec) * 100;
+        document.getElementById('timerFill').style.width = pct + '%';
+        if (remSec <= 900) document.getElementById('timerFill').style.background = 'linear-gradient(90deg,#e8722a,#d4a843)';
+      }, 1000);
+    }
+    function extendSession() {
+      remSec += 3600; totalSec += 3600;
+      showToast('1 hour added to your session.');
+    }
+    let isLocked = true;
+    function toggleUnlock() {
+      isLocked = !isLocked;
+      const btn = document.getElementById('unlockBtn');
+      const st = document.getElementById('unlockState');
+      btn.classList.toggle('unlocked', !isLocked);
+      st.textContent = isLocked ? 'Locked' : 'Unlocked';
+      st.style.color = isLocked ? '' : '#22c55e';
+      showToast(isLocked ? 'Locker locked.' : 'Locker ' + locker.id + ' is now open.');
+    }
+
+    // ---- FAQ ----
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const open = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!open) item.classList.add('open');
+    }
+
+    // ---- TOAST ----
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.textContent = msg;
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 3000);
+    }
+
+    // ---- CHAT ----
+    function openChat() { document.getElementById('chatWidget').style.display = 'flex'; }
+    function closeChat() { document.getElementById('chatWidget').style.display = 'none'; }
+    function sendChat() {
+      const inp = document.getElementById('chatIn');
+      const val = inp.value.trim();
+      if (!val) return;
+      const body = document.getElementById('chatBody');
+      body.innerHTML += '<div class="cmsg user">' + val + '</div>';
+      inp.value = '';
+      body.scrollTop = body.scrollHeight;
+      setTimeout(() => {
+        body.innerHTML += '<div class="cmsg bot">Thanks! A support agent will reply shortly.</div>';
+        body.scrollTop = body.scrollHeight;
+      }, 800);
+    }
+
+    // ---- SCROLL ANIMATIONS ----
+    function runAos() {
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('aos-in'); });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('[data-aos]').forEach(el => { el.classList.remove('aos-in'); obs.observe(el); });
+    }
+    document.addEventListener('DOMContentLoaded', runAos);
+  </script>
+</body>
+</html>
